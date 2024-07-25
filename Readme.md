@@ -5,14 +5,13 @@
 1. [Project Overview](#project-overview)
 2. [Prerequisites](#prerequisites)
 3. [Installation](#installation)
-4. [Project Structure](#project-structure)
-5. [Environment Variables](#environment-variables)
-6. [API Endpoints](#api-endpoints)
-7. [Running the Application](#running-the-application)
-8. [Error Handling](#error-handling)
-9. [Authentication](#authentication)
-10. [Contribution Guidelines](#contribution-guidelines)
-11. [License](#license)
+4. [Environment Variables](#environment-variables)
+5. [API Endpoints](#api-endpoints)
+6. [Running the Application](#running-the-application)
+7. [Error Handling](#error-handling)
+8. [Authentication](#authentication)
+9. [Contribution Guidelines](#contribution-guidelines)
+10. [License](#license)
 
 ## Project Overview
 
@@ -38,71 +37,43 @@ Before you begin, ensure you have met the following requirements:
    cd deploy-redsoft-backend
 
 3. Install the dependencies:
-   npm run install
-
-## Project Structure
-
-server/
-├── assets/
-├── controllers/
-│ ├── story.controller.js
-│ ├── user.controller.js
-├── lib/
-│ ├── db/
-│ │ ├── mongoDB.js
-│ │ ├── redis.js
-│ ├── helper/
-│ │ ├── common.js
-│ │ ├── const.js
-│ │ ├── nodemailer.js
-├── config.js
-├── middleware/
-│ ├── authentication.js
-├── models/
-│ ├── story.model.js
-│ ├── user.model.js
-├── routes/
-│ ├── api/
-│ │ ├── story.routes.js
-│ │ ├── user.routes.js
-│ ├── index.js
-├── .env
-├── .gitignore
-├── package-lock.json
-├── package.json
-└── README.md
+   ```sh
+   npm install
+   ```
 
 ## Environment Variables
 
 Create a .env file in the root directory and add the following environment variables:
 
 Required Environment Variables
-PORT: The port number on which the server will run.
-MONGO_URI: The connection string for your MongoDB database.
-SALT_ROUND: The number of salt rounds to use for hashing passwords.
-SECRET_ACCESS_KEY_USER: The secret key used for generating access tokens.
-EMAIL: The email address used for sending emails.
-EMAIL_PASSWORD: The password for the email account used for sending emails.
+-PORT: The port number on which the server will run.
+-MONGO_URI: The connection string for your MongoDB database.
+-SALT_ROUND: The number of salt rounds to use for hashing passwords.
+-SECRET_ACCESS_KEY_USER: The secret key used for generating access tokens.
+-EMAIL: The email address used for sending emails.
+-EMAIL_PASSWORD: The password for the email account used for sending emails.
 
-PORT=<your_port>
-MONGODB_URI=<your_mongodb_uri>
-SALT_ROUND=<number_of_salt_round>
-SECRET_ACCESS_KEY_USER=<your_jwt_secret>
-EMAIL=<your_email_service>
-EMAIL_PASS=<your_email_pass>
+# Example
+
+-PORT=4001
+-MONGODB_URI= mongodb+srv://<user_name>:<password>@cluster0.ylgcler.mongodb.net/<db_name>?retryWrites=true&w=majority&appName=Cluster0
+-SALT_ROUND=
+-SECRET_ACCESS_KEY_USER=RedSoftwareJWT_SecretKey
+-EMAIL=admin@gmail.com
+-EMAIL_PASS= smtp server password
 
 ## API Endpoints
 
 # User Endpoints
 
-1.Register User
-POST /api/register
-Request Body:
-{
-"username": "<username>",
-"email": "<email>",
-"password": "<password>"
-}
+1. Register User
+   POST /api/register
+   Request Body:
+   {
+   "username": "<username>",
+   "email": "<email>",
+   "password": "<password>"
+   }
 
 2. Login User
    POST /api/login
@@ -147,7 +118,10 @@ Request Body:
 ## Running the Application
 
 Start the server:
-npm start
+
+```sh
+ npm start
+```
 
 ## Error Handling
 
