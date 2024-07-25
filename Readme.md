@@ -46,21 +46,21 @@ Before you begin, ensure you have met the following requirements:
 Create a .env file in the root directory and add the following environment variables:
 
 Required Environment Variables
--PORT: The port number on which the server will run.
--MONGO_URI: The connection string for your MongoDB database.
--SALT_ROUND: The number of salt rounds to use for hashing passwords.
--SECRET_ACCESS_KEY_USER: The secret key used for generating access tokens.
--EMAIL: The email address used for sending emails.
--EMAIL_PASSWORD: The password for the email account used for sending emails.
+- PORT: The port number on which the server will run.
+- MONGO_URI: The connection string for your MongoDB database.
+- SALT_ROUND: The number of salt rounds to use for hashing passwords.
+- SECRET_ACCESS_KEY_USER: The secret key used for generating access tokens.
+- EMAIL: The email address used for sending emails.
+- EMAIL_PASSWORD: The password for the email account used for sending emails.
 
 # Example
 
--PORT=4001
--MONGODB_URI= mongodb+srv://<user_name>:<password>@cluster0.ylgcler.mongodb.net/<db_name>?retryWrites=true&w=majority&appName=Cluster0
--SALT_ROUND=
--SECRET_ACCESS_KEY_USER=RedSoftwareJWT_SecretKey
--EMAIL=admin@gmail.com
--EMAIL_PASS= smtp server password
+- PORT = 4001
+- MONGODB_URI = mongodb+srv://<user_name>:<user_password>@cluster0.ylgcler.mongodb.net/<db_name>?retryWrites=true&w=majority&appName=Cluster0
+- SALT_ROUND = 8
+- SECRET_ACCESS_KEY_USER = RedSoftwareJWT_SecretKey
+- EMAIL = admin@gmail.com
+- EMAIL_PASS = smtp server password
 
 ## API Endpoints
 
