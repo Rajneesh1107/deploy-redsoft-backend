@@ -13,6 +13,11 @@
 9. [Contribution Guidelines](#contribution-guidelines)
 10. [License](#license)
 
+# Deployed Url
+
+[https://deploy-redsoft-backend.onrender.com](https://deploy-redsoft-backend.onrender.com) 
+
+
 ## Project Overview
 
 This project is a backend assignment for Redsoftware. It provides a REST API for user authentication, story creation, and contribution management. It includes user registration, login, and logout functionalities, as well as CRUD operations for stories and their contributions. The project uses Node.js, Express, and MongoDB for backend development.
